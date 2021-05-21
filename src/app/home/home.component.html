@@ -1,0 +1,19 @@
+<h1>
+  SuperHero Leagues
+</h1>
+<div *ngFor="let heroleague of LeaguesOfHeroes">
+  <div *ngFor="let league of heroleague">
+    <h2>{{league.leaguename}}</h2>
+    <ul *ngFor="let hero of league.Heros">
+      <li>
+        <a title='click for more details'>{{hero.heroname}}</a>
+        <p *ngIf="hero.abilities">
+          Abilities : {{hero.abilities}}
+        </p>
+        <p *ngIf="hero.quotes">
+          <button (click)="onQuote(hero.quotes)">Famous Quotes</button>
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
