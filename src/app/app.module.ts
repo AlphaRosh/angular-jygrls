@@ -8,6 +8,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { HomeComponent } from './home/home.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CardService } from './card.service';
+import { HightlightDirective } from './hightlight.directive';
 
 @NgModule({
   imports: [
@@ -23,9 +25,11 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     TopBarComponent,
     ProductListComponent,
     HomeComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    HightlightDirective
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [CardService]
 })
 export class AppModule {}
 
