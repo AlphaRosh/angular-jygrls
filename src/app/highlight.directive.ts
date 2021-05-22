@@ -1,7 +1,7 @@
 import { Directive, ElementRef , HostListener} from '@angular/core';
 
 @Directive({
-  selector: '[appHightlight]'
+  selector: '[appHighlight]'
 })
 export class HightlightDirective {
 

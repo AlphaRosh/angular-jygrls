@@ -9,7 +9,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { HomeComponent } from './home/home.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CardService } from './card.service';
-import { HightlightDirective } from './hightlight.directive';
+import { HightlightDirective } from './highlight.directive';
 
 @NgModule({
   imports: [
