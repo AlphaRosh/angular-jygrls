@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CardService } from './card.service';
 import { HightlightDirective } from './highlight.directive';
-import { FilterPipe } from './filter.pipe';
+// import { FilterPipe } from './filter.pipe';
 // search module
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
@@ -20,14 +20,14 @@ import { SearchHeroComponent } from './search-hero/search-hero.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    Ng2SearchPipeModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'heroleague', component: HomeComponent },
-      { path: 'heroleague/searchhero', component: SearchHeroComponent }
-    ]),
-    Ng2SearchPipeModule,
-    FormsModule
+      { path: 'searchhero', component: SearchHeroComponent }
+    ])
   ],
   declarations: [
     AppComponent,
@@ -36,7 +36,7 @@ import { SearchHeroComponent } from './search-hero/search-hero.component';
     HomeComponent,
     ProductDetailsComponent,
     HightlightDirective,
-    FilterPipe,
+    // FilterPipe,
     SearchHeroComponent
   ],
   bootstrap: [AppComponent],
