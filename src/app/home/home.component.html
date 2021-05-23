@@ -1,12 +1,13 @@
-<div class="container text-center">
-  <h1>{{title}}</h1>
+<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="search-hero">
-      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a hero by id or name or country">
-    </div>
+<div class="container row">
+  <div class="search-hero">
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a hero by id or name or country">
+  </div>
+  <div class="container">
     <table *ngFor="let heroleague of SuperHeroLeague " class="table table-striped">
       <thead *ngFor="let league of heroleague ">
         <tr>
