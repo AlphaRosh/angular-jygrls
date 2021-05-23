@@ -14,6 +14,7 @@ import { FilterPipe } from './filter.pipe';
 // search module
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
+import { SearchHeroComponent } from './search-hero/search-hero.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
-      { path: 'heroleague', component: HomeComponent }
+      { path: 'heroleague', component: HomeComponent },
+      { path: 'heroleague/searchhero', component: SearchHeroComponent }
     ]),
     Ng2SearchPipeModule,
     FormsModule
@@ -34,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     ProductDetailsComponent,
     HightlightDirective,
-    FilterPipe
+    FilterPipe,
+    SearchHeroComponent
   ],
   bootstrap: [AppComponent],
   providers: [CardService]
