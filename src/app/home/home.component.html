@@ -1,19 +1,31 @@
-<h1>
-  SuperHero Leagues
-</h1>
-<div *ngFor="let heroleague of LeaguesOfHeroes">
-  <div *ngFor="let league of heroleague">
-    <h2>{{league.leaguename}}</h2>
-    <ul *ngFor="let hero of league.Heros">
-      <li>
-        <a title='click for more details'>{{hero.heroname}}</a>
-        <p *ngIf="hero.abilities">
-          Abilities : {{hero.abilities}}
-        </p>
-        <p *ngIf="hero.quotes">
-          <button (click)="onQuote(hero.quotes)">Famous Quotes</button>
-        </p>
-      </li>
-    </ul>
+<div class="container text-center">
+  <h1>{{title}}</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="search-hero">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a hero by id or name or country">
+    </div>
+    <table *ngFor="let heroleague of SuperHeroLeague " class="table table-striped">
+      <thead *ngFor="let league of heroleague ">
+        <tr>
+          <th colspan="3" style="background-color: tomato; color:white "> {{league.leaguename|uppercase}}</th>
+        </tr>
+        <tr>
+          <th>Hero Name</th>
+          <th>Real Name</th>
+          <th>Abilities</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let league of heroleague">
+        <tr *ngFor="let hero of league.Heros | filter:searchText">
+          <td>{{hero.heroname}}</td>
+          <td>{{hero.realname}}</td>
+          <td>{{hero.abilities}}</td>
+
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

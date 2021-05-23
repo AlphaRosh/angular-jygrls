@@ -148,6 +148,22 @@ app-top-bar h1 {
   font-weight: 500;
   font-variant-caps: petite-caps;
 }
+
+.text-success {
+  color:white;
+  background-color: green;
+}
+.text-danger {
+  color: white;
+  background-color: red;
+}
+.text-warning {
+  color: white;
+  background-color: orange;
+}
+.text-underlined {
+  text-decoration: underline;
+}
 /*
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that

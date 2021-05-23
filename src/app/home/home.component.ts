@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Hero, superhero_Leagues } from '../super';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +8,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class HomeComponent {
   data: string = 'Hello There, This is great';
-  @Input() LeaguesOfHeroes;
-  @Output() quote = new EventEmitter<string>();
+  SuperHeroLeague = superhero_Leagues;
+  searchText;
+  title:string='Super Hero League'
 
-  onQuote(quote: string){
-    this.quote.emit(quote)
+  onQuote(quote: string) {
+    alert(`Famous Quote : ${quote}`);
   }
 }

@@ -1,3 +1,16 @@
+import { NumberValueAccessor } from "@angular/forms";
+
+export interface Hero{
+   id:number;
+   heroname:string;
+   realname:string;
+   abilities:string;
+   quotes:string;
+}
+
+
+
+
 const justice_league = [
   {
     leaguename: 'Justice League',

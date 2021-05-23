@@ -10,6 +10,10 @@ import { HomeComponent } from './home/home.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CardService } from './card.service';
 import { HightlightDirective } from './highlight.directive';
+import { FilterPipe } from './filter.pipe';
+// search module
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -17,8 +21,11 @@ import { HightlightDirective } from './highlight.directive';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-      { path: 'products/:productId', component: ProductDetailsComponent }
-    ])
+      { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'heroleague', component: HomeComponent }
+    ]),
+    Ng2SearchPipeModule,
+    FormsModule
   ],
   declarations: [
     AppComponent,
@@ -26,7 +33,8 @@ import { HightlightDirective } from './highlight.directive';
     ProductListComponent,
     HomeComponent,
     ProductDetailsComponent,
-    HightlightDirective
+    HightlightDirective,
+    FilterPipe
   ],
   bootstrap: [AppComponent],
   providers: [CardService]

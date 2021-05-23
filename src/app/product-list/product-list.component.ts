@@ -10,6 +10,14 @@ import { products } from '../products';
 export class ProductListComponent {
   products = products;
 
+  getClass(price: number) {
+    return price < 500
+      ? 'text-success'
+      : price > 500 && price < 700
+      ? 'text-warning'
+      : 'text-danger';
+  }
+
   share(val) {
     window.alert(` ${val} has been shared!`);
   }
